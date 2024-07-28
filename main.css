@@ -7,11 +7,13 @@ header, footer {
 header {
   position: fixed;
   top: 0;
+  background-color: #f8f8f8; /* Example background color */
 }
 
 footer {
   position: fixed;
   bottom: 0;
+  background-color: #f8f8f8; /* Example background color */
 }
 
 #wrapper {
@@ -29,6 +31,7 @@ footer {
   width: 200px;
   left: 0;
   top: 60px; /* Same as header height */
+  background-color: #e0e0e0; /* Example background color */
 }
 
 .fixed-article {
@@ -37,6 +40,7 @@ footer {
   top: 60px; /* Same as header height */
   right: 0;
   overflow: auto;
+  background-color: #fff; /* Example background color */
 }
 
 /* Styles for two.html */
@@ -47,12 +51,14 @@ footer {
 .float-aside {
   float: left;
   width: 200px;
+  background-color: #e0e0e0; /* Example background color */
 }
 
 .float-article {
   float: left;
   width: calc(100% - 220px); /* Adjust as needed */
   overflow: auto;
+  background-color: #fff; /* Example background color */
 }
 
 footer {
@@ -69,12 +75,14 @@ footer {
 .responsive-aside {
   float: left;
   width: 25%; /* Adjust as needed */
+  background-color: #e0e0e0; /* Example background color */
 }
 
 .responsive-article {
   float: left;
   width: 70%; /* Adjust as needed */
   margin-left: 5%;
+  background-color: #fff; /* Example background color */
 }
 
 @media (max-width: 600px) {
@@ -90,13 +98,23 @@ footer {
   vertical-align: top;
   width: 45%; /* Adjust as needed */
   margin: 2%;
+  background-color: #fff; /* Example background color */
 }
 
 /* Styles for five.html */
-.gallery img {
-  display: inline-block;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.gallery figure {
   width: 30%; /* Adjust as needed */
   margin: 1.5%;
+}
+
+.gallery img {
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
