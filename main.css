@@ -2,23 +2,74 @@
 header, footer {
   width: 100%;
   height: 60px; /* Example height, you can adjust */
+  line-height: 60px; /* Align text vertically */
+  background-color: #f8f8f8; /* Example background color */
+  text-align: center; /* Center the text */
 }
 
 header {
   position: fixed;
   top: 0;
-  background-color: #f8f8f8; /* Example background color */
+  z-index: 1000; /* Ensure the header is above other content */
 }
 
 footer {
   position: fixed;
   bottom: 0;
-  background-color: #f8f8f8; /* Example background color */
+  z-index: 1000; /* Ensure the footer is above other content */
 }
 
 #wrapper {
   margin-top: 60px; /* Same as header height */
   margin-bottom: 60px; /* Same as footer height */
+}
+
+aside {
+  position: fixed;
+  top: 60px; /* Below the header */
+  left: 0;
+  width: 200px;
+  height: calc(100% - 120px); /* Adjust height considering header and footer */
+  background-color: #e0e0e0; /* Example background color */
+  overflow-y: auto; /* Scroll if content overflows */
+}
+
+aside nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+aside nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+aside nav ul li a:hover {
+  background-color: #ccc; /* Example hover color */
+}
+
+article {
+  margin-left: 220px; /* Adjust according to the aside width */
+  padding: 20px;
+  background-color: #fff; /* Example background color */
+  overflow: auto;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
 }
 
 /* Styles for one.html */
@@ -121,4 +172,6 @@ footer {
 
 .gallery img:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+0.2);
 }
