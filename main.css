@@ -1,3 +1,4 @@
+/* Global styles */
 header, footer {
   width: 100%;
   height: 60px; /* Example height, you can adjust */
@@ -16,4 +17,90 @@ footer {
 #wrapper {
   margin-top: 60px; /* Same as header height */
   margin-bottom: 60px; /* Same as footer height */
+}
+
+/* Styles for one.html */
+#one-wrapper {
+  position: relative;
+}
+
+.fixed-aside {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  top: 60px; /* Same as header height */
+}
+
+.fixed-article {
+  position: absolute;
+  left: 220px; /* Adjust as needed */
+  top: 60px; /* Same as header height */
+  right: 0;
+  overflow: auto;
+}
+
+/* Styles for two.html */
+#two-wrapper {
+  overflow: auto;
+}
+
+.float-aside {
+  float: left;
+  width: 200px;
+}
+
+.float-article {
+  float: left;
+  width: calc(100% - 220px); /* Adjust as needed */
+  overflow: auto;
+}
+
+footer {
+  clear: both;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Styles for three.html */
+.responsive-aside {
+  float: left;
+  width: 25%; /* Adjust as needed */
+}
+
+.responsive-article {
+  float: left;
+  width: 70%; /* Adjust as needed */
+  margin-left: 5%;
+}
+
+@media (max-width: 600px) {
+  .responsive-aside, .responsive-article {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* Styles for four.html */
+.inline-aside, .inline-article {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%; /* Adjust as needed */
+  margin: 2%;
+}
+
+/* Styles for five.html */
+.gallery img {
+  display: inline-block;
+  width: 30%; /* Adjust as needed */
+  margin: 1.5%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery img:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
